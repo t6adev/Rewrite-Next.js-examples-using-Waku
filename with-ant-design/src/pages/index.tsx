@@ -1,5 +1,7 @@
+import HomePageContent from '../components/HomePageContent';
+
 export default async function HomePage() {
-  return <div>template</div>;
+  return <HomePageContent />;
 }
 
 export const getConfig = async () => {

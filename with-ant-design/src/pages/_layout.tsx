@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 
+import StyledComponentsRegistry from '../components/AntdRegistry';
+
 type RootLayoutProps = { children: ReactNode };
 
 export default async function RootLayout({ children }: RootLayoutProps) {
@@ -9,7 +11,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     <div>
       <meta name="title" content={data.title} />
       <meta name="description" content={data.description} />
-      <main>{children}</main>
+      <main>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </main>
     </div>
   );
 }
